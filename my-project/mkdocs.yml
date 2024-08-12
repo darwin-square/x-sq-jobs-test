@@ -1,0 +1,5 @@
+site_name: X-SQ-JOBS
+nav:
+  - Home: index.md
+  - About: about.md
+theme: readthedocs
