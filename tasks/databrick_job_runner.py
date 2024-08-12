@@ -4,7 +4,7 @@
 import os
 import sys
 import subprocess
-import locations as loc
+import tasks.locations as loc
 
 def install_dependencies() -> None:
     """Runs the install_packages.sh file for any project dependencies."""
