@@ -2,4 +2,5 @@ site_name: X-SQ-JOBS
 nav:
   - Home: index.md
   - About: about.md
+  - Events: test_event.md
 theme: readthedocs

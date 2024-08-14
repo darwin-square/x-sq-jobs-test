@@ -1,6 +1,6 @@
-# Test event 1
+# Events
 
-## Purchase Order
+## Purchase Order YAML
 
 ```
 PurchaseOrder: # This should be camelcase
@@ -47,5 +47,43 @@ PurchaseOrder: # This should be camelcase
       - MODAL: # This should all caps snakecase 
           comment: Description of enum_field_2
       - BLADE: # This should all caps snakecase 
+          comment: Description of enum_field_3
+```
+
+## Event 2 YAML
+
+```
+FeatureName: # This should be camelcase
+  definition: description of the feature
+  owners:
+    - registry-group # make sure it has git-sync enabled
+  actions:
+    ActivityName: # This should be camelcase
+      definition: description of the activity
+      events:
+        EventName: # This should be camelcase
+          comment: description of the event
+          params:
+          - field_1 : String # field  names should be snakecase
+            semantic_types:
+              - namespace: CONSUMER
+                name: FIRST_NAME
+                rubric_version: 0
+            comment: Description of field_1
+          - field_2 : String
+            comment: Description of field_2
+          - field_3: EnumName
+            comment: Description of field_3
+          destinations:
+          - SNOWFLAKE # Only snowflake is available for this POC
+
+# If you need enums, declare it at the feature level. If you do not need enums, delete the everything below
+  types:
+    EnumName: # This should be camelcase. If the enum is 1 word, make sure the first letter is upper cased
+      - enum_field_1: # This should all caps snakecase 
+          comment: Description of enum_field_1
+      - enum_field_2: # This should all caps snakecase 
+          comment: Description of enum_field_2
+      - enum_field_3: # This should all caps snakecase 
           comment: Description of enum_field_3
 ```
