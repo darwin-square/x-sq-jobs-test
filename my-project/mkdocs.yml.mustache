@@ -1,5 +1,5 @@
 site_name: Cross-Square Feature Usage Event Catalog
-site_description: Search and browse existing Square analytics events
+site_description: Search and browse cash-cdf analytics events
 site_author: "#darwin-square"
 
 repo_url: https://github.com/darwin-square/x-sq-jobs-test
@@ -21,27 +21,31 @@ nav:
   #  - "Analytics Debugger": debugger.md
   #  - "CDF Command Line": cli.md
 
-  - "Events" : test_event.md
-  # {{# entities }}
-  #   - "{{ entity_name }}" :
-  #     - "{{ entity_name }}/index.md"
-  #   {{# actions }}
-  #     - "{{ action_name }}" :
-  #       - "{{ entity_name }}/{{ action_name }}/index.md"
-  #     {{# events }}
-  #       - "{{ event_name }}" : {{ entity_name }}/{{ action_name }}/{{ event_name }}.md
-  #     {{/ events }}
-  #   {{/ actions }}
-  # {{/ entities }}
-
-  # {{#hasTagGroups}}- "Tags":{{/hasTagGroups}}
-  # {{# tagGroups }}
-  #   - {{ name }}: tags/{{ identifier }}.md
-  # {{/ tagGroups }}
-
   - "Last Updated" :
-    - "{{ update_time }}" : "https://github.com/squareup/cash-cdf/commits/gh-pages-event-browser"
+  #  - "{{ update_time }}" : "https://github.com/squareup/cash-cdf/commits/gh-pages-event-browser"
     - "August 2024" : "https://github.com/squareup/cash-cdf/commits/gh-pages-event-browser"
+
+  # TODO:
+  # A page that makes it easy to create new events with validation
+  #- "Event Creation Tool": event_creation_tool.md
+
+  - "Events" :
+  {{# entities }}
+    - "{{ entity_name }}" : 
+      - "{{ entity_name }}/index.md"
+    {{# actions }}
+      - "{{ action_name }}" : 
+        - "{{ entity_name }}/{{ action_name }}/index.md"
+      {{# events }}
+        - "{{ event_name }}" : {{ entity_name }}/{{ action_name }}/{{ event_name }}.md
+      {{/ events }}
+    {{/ actions }}
+  {{/ entities }}
+
+  {{#hasTagGroups}}- "Tags":{{/hasTagGroups}}
+  {{# tagGroups }}
+    - {{ name }}: tags/{{ identifier }}.md
+  {{/ tagGroups }}
 
 theme:
   name: material
