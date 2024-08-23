@@ -1,0 +1,1361 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Search and browse existing Square analytics events">
+      
+      
+        <meta name="author" content="#darwin-square">
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../format/">
+      
+      <link rel="icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.15">
+    
+    
+      
+        <title>How-to Guides - Cross-Square Feature Usage Event Catalog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.113286f1.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/app.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="amber" data-md-color-primary="amber" data-md-color-accent="amber">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cdf-poc-how-to-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Cross-Square Feature Usage Event Catalog" class="md-header__button md-logo" aria-label="Cross-Square Feature Usage Event Catalog" data-md-component="logo">
+      
+  <img src="../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Cross-Square Feature Usage Event Catalog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              How-to Guides
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="amber" data-md-color-primary="amber" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3m0-4.5c5 0 9.27 3.11 11 7.5-1.73 4.39-6 7.5-11 7.5S2.73 16.39 1 12c1.73-4.39 6-7.5 11-7.5M3.18 12a9.821 9.821 0 0 0 17.64 0 9.821 9.821 0 0 0-17.64 0Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="amber" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/darwin-square/x-sq-jobs-test" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    darwin-square/x-sq-jobs-test
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Cross-Square Feature Usage Event Catalog" class="md-nav__button md-logo" aria-label="Cross-Square Feature Usage Event Catalog" data-md-component="logo">
+      
+  <img src="../img/logo.png" alt="logo">
+
+    </a>
+    Cross-Square Feature Usage Event Catalog
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/darwin-square/x-sq-jobs-test" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    darwin-square/x-sq-jobs-test
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../event_audit.md" class="md-nav__link">
+        Event Audit/Summary
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Documentation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Documentation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          How-to Guides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        How-to Guides
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#identify-2-jobs" class="md-nav__link">
+    Identify 2+ jobs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#insert-events-into-tracking-plan" class="md-nav__link">
+    Insert Events into Tracking Plan
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identify-or-create-event-schemas" class="md-nav__link">
+    Identify or create event schemas
+  </a>
+  
+    <nav class="md-nav" aria-label="Identify or create event schemas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-for-an-existing-event" class="md-nav__link">
+    Check for an Existing Event
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-event-or-update-existing-event" class="md-nav__link">
+    Create a New Event or Update Existing Event
+  </a>
+  
+    <nav class="md-nav" aria-label="Create a New Event or Update Existing Event">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-event-for-a-new-feature" class="md-nav__link">
+    Create a new Event for a new Feature
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yaml-specification" class="md-nav__link">
+    Yaml Specification
+  </a>
+  
+    <nav class="md-nav" aria-label="Yaml Specification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#feature" class="md-nav__link">
+    Feature
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actions" class="md-nav__link">
+    Actions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activity" class="md-nav__link">
+    Activity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event" class="md-nav__link">
+    Event
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#param" class="md-nav__link">
+    Param
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enums" class="md-nav__link">
+    Enums
+  </a>
+  
+    <nav class="md-nav" aria-label="Enums">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#global-enums" class="md-nav__link">
+    Global Enums
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-activity-or-event-for-an-existing-feature" class="md-nav__link">
+    Create a new Activity or Event for an existing Feature
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commit-push-and-open-pr" class="md-nav__link">
+    Commit, Push, and Open PR
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wait-for-approvals-and-infrastructure" class="md-nav__link">
+    Wait for Approvals and Infrastructure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instrument-events-in-your-applications-through-staging" class="md-nav__link">
+    Instrument Events in your Applications (through Staging)
+  </a>
+  
+    <nav class="md-nav" aria-label="Instrument Events in your Applications (through Staging)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#web-engineers" class="md-nav__link">
+    Web Engineers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ios-engineers" class="md-nav__link">
+    iOS Engineers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#android-engineers" class="md-nav__link">
+    Android Engineers
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validate-data-in-snowflake" class="md-nav__link">
+    Validate Data in Snowflake
+  </a>
+  
+    <nav class="md-nav" aria-label="Validate Data in Snowflake">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#event-tables" class="md-nav__link">
+    Event tables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aggregate-tables" class="md-nav__link">
+    Aggregate tables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pii" class="md-nav__link">
+    PII
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../format/" class="md-nav__link">
+        Definition Format
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../test_event/" class="md-nav__link">
+        Events
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Last Updated
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Last Updated
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/squareup/cash-cdf/commits/gh-pages-event-browser" class="md-nav__link">
+        {{ update_time }}
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/squareup/cash-cdf/commits/gh-pages-event-browser" class="md-nav__link">
+        August 2024
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#identify-2-jobs" class="md-nav__link">
+    Identify 2+ jobs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#insert-events-into-tracking-plan" class="md-nav__link">
+    Insert Events into Tracking Plan
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identify-or-create-event-schemas" class="md-nav__link">
+    Identify or create event schemas
+  </a>
+  
+    <nav class="md-nav" aria-label="Identify or create event schemas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-for-an-existing-event" class="md-nav__link">
+    Check for an Existing Event
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-event-or-update-existing-event" class="md-nav__link">
+    Create a New Event or Update Existing Event
+  </a>
+  
+    <nav class="md-nav" aria-label="Create a New Event or Update Existing Event">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-event-for-a-new-feature" class="md-nav__link">
+    Create a new Event for a new Feature
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yaml-specification" class="md-nav__link">
+    Yaml Specification
+  </a>
+  
+    <nav class="md-nav" aria-label="Yaml Specification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#feature" class="md-nav__link">
+    Feature
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actions" class="md-nav__link">
+    Actions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activity" class="md-nav__link">
+    Activity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event" class="md-nav__link">
+    Event
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#param" class="md-nav__link">
+    Param
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enums" class="md-nav__link">
+    Enums
+  </a>
+  
+    <nav class="md-nav" aria-label="Enums">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#global-enums" class="md-nav__link">
+    Global Enums
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-activity-or-event-for-an-existing-feature" class="md-nav__link">
+    Create a new Activity or Event for an existing Feature
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commit-push-and-open-pr" class="md-nav__link">
+    Commit, Push, and Open PR
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wait-for-approvals-and-infrastructure" class="md-nav__link">
+    Wait for Approvals and Infrastructure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instrument-events-in-your-applications-through-staging" class="md-nav__link">
+    Instrument Events in your Applications (through Staging)
+  </a>
+  
+    <nav class="md-nav" aria-label="Instrument Events in your Applications (through Staging)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#web-engineers" class="md-nav__link">
+    Web Engineers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ios-engineers" class="md-nav__link">
+    iOS Engineers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#android-engineers" class="md-nav__link">
+    Android Engineers
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validate-data-in-snowflake" class="md-nav__link">
+    Validate Data in Snowflake
+  </a>
+  
+    <nav class="md-nav" aria-label="Validate Data in Snowflake">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#event-tables" class="md-nav__link">
+    Event tables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aggregate-tables" class="md-nav__link">
+    Aggregate tables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pii" class="md-nav__link">
+    PII
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+
+<h1 id="cdf-poc-how-to-guide">CDF POC How-To Guide</h1>
+<h2 id="identify-2-jobs">Identify 2+ jobs</h2>
+<p>Identify 2+ jobs for your product that follows the below criteria:</p>
+<ol>
+<li>These events should aid in the calculation of business metrics and guide product decision-making</li>
+<li>Jobs/features should be a good representative sample of the product ecosystem that you are responsible for</li>
+<li>Include at least one Job that spans across platforms such Desktop/Mobile or Dashboard/POS</li>
+<li>[Nice to Have] Incorporate shared features that also depend on collaboration with other teams for development and ownership</li>
+<li>Recommended: You can pick jobs from the <a href="http://go/audience-jtbd">go/audience-jtbd</a> if they already satisfy the aforementioned criteria</li>
+</ol>
+<h2 id="insert-events-into-tracking-plan">Insert Events into Tracking Plan</h2>
+<p>Put them <a href="http://go/uedc-poc-features">here</a> for the POC. This step lets you capture the events you want to build before subsequent steps. You can use this list to ensure you know which Event schema to use (or if you need to request changes to those schemas.)  It can also act as a checklist between Product, Engineering, and Data Consumers to ensure all parties know the important touchpoints to instrument and evaluate. You will have a second time to review your planned events in GitHub later.</p>
+<h2 id="identify-or-create-event-schemas">Identify or create event schemas</h2>
+<p>Checkout our git repo <strong>recursively</strong> (to include submodules) <a href="https://github.com/squareup/message-schemas">here</a>:</p>
+<div class="codehilite"><pre><span></span><code>git clone --recurse-submodules org-49461806@github.com:squareup/message-schemas.git
+</code></pre></div>
+
+<p>For each event in your product tracking plan,</p>
+<h3 id="check-for-an-existing-event">Check for an Existing Event</h3>
+<p>CDP provides a UI to catalog all existing event schemas. Before creating new events, check if your plan can be served by these events at <a href="http://go/ueschema">go/ueschema</a>.</p>
+<p>For advice on your use case and how to apply these Schemas, contact us in <a href="https://square.slack.com/archives/C06H6Q8FKB2">#unified-eventing-data-council</a> and on call can advise.</p>
+<h3 id="create-a-new-event-or-update-existing-event">Create a New Event or Update Existing Event</h3>
+<h4 id="create-a-new-event-for-a-new-feature">Create a new Event for a new Feature</h4>
+<p>First, create a directory for your feature in message-schemas/cdp_events. The directory name should be <strong>snake case</strong>.</p>
+<p>For Example, if your feature is “HomeModule” then the directory should be:</p>
+<div class="codehilite"><pre><span></span><code>message-schemas/cdp_event/home_module
+</code></pre></div>
+
+<p>The file name for your feature yaml should also be snake case. For the feature HomeModule, the resulting filename should be:</p>
+<div class="codehilite"><pre><span></span><code>message-schemas/cdp_event/home_module/home_module.yaml
+</code></pre></div>
+
+<p>Copy the template for creating your feature yaml and replace the red text with the actual values for your events. Details of each field will be covered below.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">FeatureName</span><span class="p">:</span><span class="w"> </span><span class="c1"># This should be camelcase</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">definition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">description of the feature</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nt">owners</span><span class="p">:</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">registry-group</span><span class="w"> </span><span class="c1"># make sure it has git-sync enabled</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nt">actions</span><span class="p">:</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="nt">ActivityName</span><span class="p">:</span><span class="w"> </span><span class="c1"># This should be camelcase</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nt">definition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">description of the activity</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="nt">events</span><span class="p">:</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">      </span><span class="nt">EventName</span><span class="p">:</span><span class="w"> </span><span class="c1"># This should be camelcase</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="nt">comment</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">description of the event</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span><span class="nt">params</span><span class="p">:</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">field_1 </span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">String</span><span class="w"> </span><span class="c1"># field  names should be snake case</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">            </span><span class="nt">semantic_types</span><span class="p">:</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CONSUMER</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">                </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FIRST_NAME</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">                </span><span class="nt">rubric_version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">            </span><span class="nt">comment</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Description of field_1</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">field_2 </span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">String</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">            </span><span class="nt">comment</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Description of field_2</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">field_3</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EnumName</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">            </span><span class="nt">comment</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Description of field_3</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">        </span><span class="nt">destinations</span><span class="p">:</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SNOWFLAKE</span><span class="w"> </span><span class="c1"># Only snowflake is available for this POC</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="c1"># If you need enums, declare it at the feature level. If you do not need enums, delete everything below</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="nt">types</span><span class="p">:</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">  </span><span class="nt">EnumName</span><span class="p">:</span><span class="w"> </span><span class="c1"># This should be camelcase. If the enum is 1 word, make sure the first letter is uppercased</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">enum_field_1</span><span class="p">:</span><span class="w"> </span><span class="c1"># This should all caps snake case </span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">      </span><span class="nt">comment</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Description of enum_field_1</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">enum_field_2</span><span class="p">:</span><span class="w"> </span><span class="c1"># This should all caps snake case </span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">      </span><span class="nt">comment</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Description of enum_field_2</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">enum_field_3</span><span class="p">:</span><span class="w"> </span><span class="c1"># This should all caps snake case </span>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">      </span><span class="nt">comment</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Description of enum_field_3</span>
+</code></pre></div>
+<h4 id="yaml-specification">Yaml Specification</h4>
+<h5 id="feature">Feature</h5>
+<p>The FeatureName key should be replaced with the actual feature name. Feature has the following properties:
+- <strong>definition</strong>: Description of the feature
+- <strong>owners</strong>: List of <a href="https://registry.sqprod.co/groups">registry group</a> owners for the feature. Owner teams are responsible for all events defined in the feature file. They will be required to approve changes to these schemas. Make sure git-sync is enabled for the registry group.
+  - Example registry group: <a href="https://registry.sqprod.co/groups/marketing-automation">marketing-automation</a>
+- <strong>actions</strong>: List of activities</p>
+<h5 id="actions">Actions</h5>
+<p>List of activities. Refer to <a href="https://docs.google.com/document/d/1ohbqdCwgTAlDkoaE0uMUOixC0PFTj8l5xdFipBum9lk">Square Eventing Framework proposal</a> for details on feature and activities</p>
+<h5 id="activity">Activity</h5>
+<p>The ActivityName key should be replaced with the actual activity name. Activity has the following properties:</p>
+<ul>
+<li><strong>definition</strong>: Description of the activity</li>
+<li><strong>events</strong>: List of events</li>
+</ul>
+<h5 id="event">Event</h5>
+<p>The EventName key should be replaced with the actual event name. An event block has the following properties:</p>
+<ul>
+<li><strong>comment</strong>: Description of the event</li>
+<li><strong>destination</strong>: List of destinations to sync the event to (<strong>only Snowflake is supported</strong> as of August 2024)</li>
+<li><strong>params</strong>: Map of fields to their definition</li>
+</ul>
+<h5 id="param">Param</h5>
+<p>A param should be thought of as an event field. Each param has the following properties:
+- type: Field value type
+  - Supported primitive types (<a href="https://github.com/squareup/message-schemas/blob/main/cdp_events/cdf.yaml#L7">details</a>)
+    - String
+    - Int32
+    - Int64
+      - For timestamp fields it is recommended to use Int64 type to represent an epoch millisecond timestamp
+    - Bool
+    - Double
+  - Can be an enum; more details in the <a href="#enums">enum section</a>
+  - Can be an array of one of the primitives or enum; just add brackets around the type. You cannot have an array of mixed types. Array has to store elements of the same type. Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">Start</span><span class="p">:</span><span class="w"> </span><span class="c1"># AccountCreateStart</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">comment</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">User started create account flow</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">params</span><span class="p">:</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">merchant_categories </span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">String</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">      </span><span class="nt">comment</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">list of merchant categories</span>
+</code></pre></div>
+<ul>
+<li><strong>comment</strong>: Description of the field</li>
+<li><strong>semantic_types</strong>: List of semantic information relating to the field, which is used to determine PII level. Refer to the <a href="https://github.com/squareup/dsl-framework/blob/main/rubrics/releases/for-dsl-engine/rubrics_v0.json">DSL rubric</a> for possible values.</li>
+<li><strong>namespace</strong>: Semantic types are grouped by namespace, which are the top level keys in the rubric json. Currently available namespaces:<ul>
+<li><a href="https://github.com/squareup/dsl-framework/blob/main/rubrics/releases/for-dsl-engine/rubrics_v0.json#L3">PCI</a></li>
+<li><a href="https://github.com/squareup/dsl-framework/blob/main/rubrics/releases/for-dsl-engine/rubrics_v0.json#L151">CONSUMER</a></li>
+<li><a href="https://github.com/squareup/dsl-framework/blob/main/rubrics/releases/for-dsl-engine/rubrics_v0.json#L1011">MERCHANT</a></li>
+<li><a href="https://github.com/squareup/dsl-framework/blob/main/rubrics/releases/for-dsl-engine/rubrics_v0.json#L2024">EMPLOYEE</a></li>
+</ul>
+</li>
+<li><strong>semantic_type</strong>: Describes the general contents of data in a field. Choose from the semantic types defined in the dsl rubric </li>
+<li><strong>version</strong>: Version of the DSL rubric definitions</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">Start</span><span class="p">:</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">params</span><span class="p">:</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">first_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">String</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">      </span><span class="nt">comment</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">first name of person owner of the merchant</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">      </span><span class="nt">semantic_types</span><span class="p">:</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FIRST_NAME</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">          </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">consumer</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">          </span><span class="nt">rubric_version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+</code></pre></div>
+<h5 id="enums">Enums</h5>
+<p>Params can have enum types. For enums that are only used in 1 feature, they should be declared in the same feature file. You should declare the enum in the types list of your feature:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">FeatureName</span><span class="p">:</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">definition</span><span class="p">:</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nt">owners</span><span class="p">:</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="nt">actions</span><span class="p">:</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">  </span><span class="nt">types</span><span class="p">:</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="nt">Status</span><span class="p">:</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">INACTIVE</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">comment</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">account was deactivated by owner</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ACTIVE</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">comment</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">account is active and accepting payments</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">    </span><span class="nt">Level</span><span class="p">:</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PRIMARY</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">comment</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">first level of naming hierarchy</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SECONDARY</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">comment</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">second level of naming hierarchy</span>
+</code></pre></div>
+<h6 id="global-enums">Global Enums</h6>
+<p>If you want to reuse your enums across multiple features, you will need to first declare them in the <a href="https://github.com/squareup/message-schemas/blob/main/cdp_events/cdf.yaml#L43">message-schemas/cdp_events/cdf.yaml</a> file. There is a custom_types block that is a list of global enum types; add yours to this list:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">cdf</span><span class="p">:</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">custom_types</span><span class="p">:</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="nt">CurrencyCode</span><span class="p">:</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">USD</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GBP</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">JPY</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BTC</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CAD</span>
+</code></pre></div>
+<p>Once you have added your global enum to custom_types list, you can reference it in your feature files and use the enum as the value type for your event fields:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nt">Account</span><span class="p">:</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="nt">definition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Square Merchant Account</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="nt">owners</span><span class="p">:</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">marketing-automation</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">  </span><span class="nt">actions</span><span class="p">:</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="nt">Create</span><span class="p">:</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">      </span><span class="nt">definition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Create Square account</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">      </span><span class="nt">events</span><span class="p">:</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">        </span><span class="nt">Start</span><span class="p">:</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">          </span><span class="nt">comment</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Started square account creation</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">          </span><span class="nt">params</span><span class="p">:</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">currency_code</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CurrencyCode</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">            </span><span class="nt">comment</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The currency code used by the merchant</span>
+</code></pre></div>
+<h4 id="create-a-new-activity-or-event-for-an-existing-feature">Create a new Activity or Event for an existing Feature</h4>
+<p>If the feature already exists, you can add a new activity to the actions array. Likewise, you can also add a new event to the events field of any activity.</p>
+<h2 id="commit-push-and-open-pr">Commit, Push, and Open PR</h2>
+<p>Once you are finished editing your feature yaml. Run through the normal git flow of “git add” then “git commit” with a commit message describing the event you have added or updated:</p>
+<div class="codehilite"><pre><span></span><code>git add &lt;event yaml&gt;
+git commit -m &quot;added X event&quot;
+</code></pre></div>
+
+<p>For all schema changes, Our system has a pre-commit hook set up for code generation. When you commit, you will see additional files checked in automatically. This includes:
+- avro schemas
+- proto schemas
+- A JSON map used internally for routing
+- OWNERS.yaml</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>To ensure these files are correctly updated and integrated, please avoid skipping the pre-commit hook (occurs when <code>--no-verify</code> flag is set or the GitHub web editor is used)!</p>
+</div>
+<p>Once the “git commit” command finishes successfully, push your changes:</p>
+<div class="codehilite"><pre><span></span><code>git push
+</code></pre></div>
+
+<p>You should now be able to open a PR in the <a href="https://github.com/squareup/message-schemas">message-schemas</a> repo.</p>
+<p>If your yaml is not valid, the pre-commit hook should log errors on what needs to be fixed. Repeat the flow:</p>
+<ol>
+<li>Make changes</li>
+<li><code>git add</code> changes</li>
+<li><code>git commit</code> changes<ol>
+<li>If <code>git commit</code> is successful, then <code>git push</code> and open PR</li>
+<li>If <code>git commit</code> is unsuccessful, start from (1)</li>
+</ol>
+</li>
+</ol>
+<p>If it is not clear what the error is, feel free to reach out to <a href="https://square.slack.com/archives/CT2R75XHA">#cdp</a> for help.</p>
+<h2 id="wait-for-approvals-and-infrastructure">Wait for Approvals and Infrastructure</h2>
+<p>After your PR has been approved and successfully passed all checks, you are ready to merge it into the main branch. <strong>You will need to manually merge your PR!</strong> Merging kicks off the <a href="https://buildkite.com/runway/schema-validation-sync/builds/28#_">runway pipeline</a> which handles a few prerequisites to send your events, which includes:
+- Schema validation checks
+- Schema upload to S3 bucket
+- Schema syncing to confluent
+    - Via automated PR <a href="https://github.com/squareup/tf-confluent-v2/pull/1402">like this one</a> against tf-confluent-v2 repo to apply schema changes and provision kafka infrastructure</p>
+<p>You can view your new event definition in <a href="http://go/ue-schemas">our GitHub Docs</a>! </p>
+<p>It is recommended that you leave a few hours for Kafka infrastructure to be provisioned by terraform. Unfortunately, DSI owns the terraform build and only their team has access to view the progress.</p>
+<p>The code gen pipeline uploads new events to Artifactory once a day around midnight. Regardless if there are any new events, the job will run every night and create a new artifact. Once this job completes, you will be able to move onto step 6. Essentially, you will have to wait until the next day to start instrumenting with your code gen classes. The CDP team is working on improving this turnaround time for general release.</p>
+<p>(For the POC, you can check these repositories to find your change and check on status or if anything went wrong, tf-confluent-v2, also feel free to ping #ue-prototype for speedy help.)</p>
+<p>It is recommended that you leave a few hours for Kafka infrastructure to be provisioned by Terraform. <a href="https://square.slack.com/archives/C05LGEYS1GC">DSI</a> owns the Terraform build and only their team has access to view the progress.</p>
+<p><strong>The code gen pipeline uploads new events to Artifactory once a day around midnight.</strong> Regardless of whether there are any new events, the job will run every night and create a new artifact. Once this job completes you will be able to move onto the next step. Essentially, you will have to wait until the next day to start instrumenting with your code gen classes. The CDP team is working on improving this turnaround time for general release.</p>
+<p>(For the POC, you can check these repositories to find your change and check on status or if anything went wrong, <a href="https://github.com/squareup/tf-confluent-v2/">tf-confluent-v2</a>; also, feel free to ping <a href="https://square.slack.com/archives/C072CB6B5JA">#ue-prototype</a> for speedy help.)</p>
+<h2 id="instrument-events-in-your-applications-through-staging">Instrument Events in your Applications (through Staging)</h2>
+<h3 id="web-engineers">Web Engineers</h3>
+<p>Once a schema has been published, a web engineer will then need to:</p>
+<ol>
+<li>Add or Update <code>@squareup/message-schemas-web</code> dependency to use the latest version</li>
+<li>Call <code>trackWithSchema</code> in application code:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">accountEvents</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">AccountCreateStart</span><span class="p">({</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="nx">accountAge</span><span class="o">:</span><span class="w"> </span><span class="mf">17</span><span class="p">,</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="nx">accountType</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Kevin&#39;s test account&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="nx">currencyCode</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;USD&#39;</span><span class="p">,</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="nx">firstName</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Kevin&#39;</span><span class="p">,</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="nx">hasEmployees</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="nx">squareAccount</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="nx">statuses</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;ACTIVE&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;FROZEN&#39;</span><span class="p">],</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="p">});</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="nx">trackWithSchema</span><span class="p">(</span><span class="nx">accountEvents</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="ios-engineers">iOS Engineers</h3>
+<p>Once a schema has been published, an iOS engineer should:</p>
+<ol>
+<li>
+<p>Update the Pod (MessageSchemas) that contains all the generated event structures. In a terminal, and within the root of the ios-register repo, run the following:</p>
+<p>be pod update MessageSchemas</p>
+</li>
+<li>
+<p>Add the following dependencies to your Bazel module:</p>
+<div class="codehilite"><pre><span></span><code>```yaml
+sq_apple_framework()
+    ...
+    deps = [
+    &quot;//Frameworks/UnifiedEventing/Public:UnifiedEventing&quot;,
+    &quot;//Frameworks/Metron/Public:Metron&quot;,
+    &quot;//Pods/MessageSchemas&quot;,
+],
+...
+</code></pre></div>
+
+</li>
+<li>
+<p>Add the imports at the top of the file where you intend on logging:</p>
+<div class="codehilite"><pre><span></span><code>import MessageSchemas
+import Metron
+import UnifiedEventing
+</code></pre></div>
+
+</li>
+<li>
+<p>Call <code>Log.cdpv2</code> in your code:</p>
+<div class="codehilite"><pre><span></span><code>Log.cdpv2(
+    BetaLabsRenderView(
+        feature_id: &#39;test-feature-id&#39;,
+        feature_format: &#39;feature-format&#39;,
+        feature_name: &#39;Beta Labs Feature name&#39;,
+        is_default_view: false,
+        event_description: &#39;test event description&#39;,
+        feature_parent_id: &#39;test-feature-parent-id&#39;,
+        feature_layout: &#39;test-feature-layout&#39;,
+        is_task_completed: false
+   )
+)
+</code></pre></div>
+
+</li>
+</ol>
+<h3 id="android-engineers">Android Engineers</h3>
+<ol>
+<li>Once a schema has been published (may take 24h), it will appear in one of the published compiled libraries here,</li>
+<li>Update the event library to the latest version. You can view the latest version number here </li>
+<li>Open dependencies.gradle</li>
+<li>Update unified_eventing_events to the new version</li>
+<li>Don’t sync your IDE yet!</li>
+<li>If necessary, add a reference from your module to the events library. Add api deps.unified_eventing_events to your build.gradle.</li>
+<li>Sync your IDE to have the latest version of the events available.</li>
+<li>Send via one of the following methods. The first two use a lambda to defer or avoid construction of the event when it’s going to be filtered or sampled out. The third is an extension method in Metron that calls the static method.</li>
+<li>Metron.cdpv2 { MyEvent(param1, param2) }</li>
+<li>metronLogger.cdpv2 { MyEvent(param1, param2) }</li>
+<li>MyEvent(param1, param2).log()</li>
+</ol>
+<h2 id="validate-data-in-snowflake">Validate Data in Snowflake</h2>
+<p>In the POC, data will land in <a href="http://go/stagingsnowflake">go/stagingsnowflake</a>.</p>
+<p>After the message-schemas post-merge workflow completes a follow-up workflow is kicked off to update the kafka-snowflake connector to include (or remove) the updated topics. Once this is complete the pipeline is ready for events to be written to snowflake.</p>
+<h3 id="event-tables">Event tables</h3>
+<p>Example event: <strong>HomeModule_Render_View</strong>
+Table: CUSTOMER_DATA.GLOBAL.HOME_MODULE_RENDER_VIEW
+Query:</p>
+<div class="codehilite"><pre><span></span><code>SELECT * FROM CUSTOMER_DATA.GLOBAL.HOME_MODULE_RENDER_VIEW;
+</code></pre></div>
+
+<p>Example query:</p>
+<div class="codehilite"><pre><span></span><code>SELECT record_content:entity_id AS entity_id, record_content:properties:feature AS feature 
+FROM customer_data.global.home_module_render_view
+WHERE record_content:entity_type = &#39;merchant&#39;;
+</code></pre></div>
+
+<h3 id="aggregate-tables">Aggregate tables</h3>
+<p>The aggregate table is built off of a dynamic table. The creation of this table is not automatic and requires manual intervention at this phase of the project. In future iterations this will become automated.</p>
+<p>Table: CUSTOMER_DATA.GLOBAL.TRACK
+Query:</p>
+<div class="codehilite"><pre><span></span><code>SELECT * FROM CUSTOMER_DATA.GLOBAL.TRACK;
+</code></pre></div>
+
+<p>Example query:</p>
+<div class="codehilite"><pre><span></span><code>SELECT *
+FROM CUSTOMER_DATA.GLOBAL.TRACK
+WHERE record_content:event_name = &#39;account_create_start&#39;
+</code></pre></div>
+
+<h3 id="pii">PII</h3>
+<p>The CDP to Snowflake pipeline is currently not set up to handle PII. Fields annotated with a semantic_type, will be set to null in Snowflake. We are working on setting up our Snowflake pipeline to handle PII and should have this available shortly.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  Previous
+                </span>
+                Home
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../format/" class="md-footer__link md-footer__link--next" aria-label="Next: Definition Format" rel="next">
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  Next
+                </span>
+                Definition Format
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Last Updated: August 2024
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/squareup/cash-cdf" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://cash.slack.com/channels/cash-cdf" target="_blank" rel="noopener" title="cash.slack.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.sections", "navigation.indexes", "navigation.footer"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.2a6f1dda.min.js"></script>
+      
+    
+  </body>
+</html>
