@@ -1,0 +1,23 @@
+JTBDFamilyName: # This should be camelcase
+  definition: description of the JTBD Family 
+  owners:
+    - registry-group # make sure it has git-sync enabled
+  jtbd:
+    JTBDName: # This should be camelcase
+      definition: description of the JTBD
+      sub_jtbd: 
+  SubJTBDName:
+  definition: description of the sub-JTBD
+  tasks:
+    TaskName:
+    definition : description of the task
+    events: 
+            EventName: # This should be camelcase / product_event_name
+              comment: description of the event
+              params:
+              - product_event_order : String # optional
+              - product_event_start_end : String # optional
+              - source_database : String
+              - source_schema : String
+              - source_table : String
+              - filter : array

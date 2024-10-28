@@ -1,0 +1,23 @@
+JTBDFamilyName: Manage Inventory
+  definition: description of the JTBD Family
+  owners:
+    - retail-analytics
+  jtbd:
+    JTBDName: Meet Demand 
+      Definition : description of the JTBD
+      sub_jtbd: 
+  SubJTBDName : Manage Purchase Order
+  definition : description of the sub-JTBD
+  tasks: 
+          TaskName: Create Purchase Order
+          definition: description of the task
+          events: 
+            EventName: Create Purchase Order on Dashboard
+              comment : description of the event
+              params:
+              - product_event_order : NULL 
+              - product_event_start_end : End
+              - source_database : CUSTOMER_DATA
+              - source_schema : DASHBOARD
+              - source_table : merchant_create_purchase_order
+              - filter : [“properties_action='EDIT'”]

@@ -6,8 +6,9 @@
 python3 -m pip install -r requirements.txt
 
 # Generate CDF Doc Pages
-cd cdf
-./cdf generate --target mkdocs ../cdp_events --output ../generated --usage usage.json
+# cd cdf
+# ./cdf generate --target mkdocs ../cdp_events --output ../generated --usage usage.json
+# will replace this step with MKdocsGenerator.py to generate markdown files
 
 cd ../generated/mkdocs
 python3 -m mkdocs build --clean --strict
